@@ -34,50 +34,50 @@ func runPartOne(filePath string) (int, error) {
 	scanner := bufio.NewScanner(file)
 	scanner.Split(bufio.ScanLines)
 
-    totalScore := 0
+	totalScore := 0
 
-    for scanner.Scan() {
-        line := scanner.Text()
+	for scanner.Scan() {
+		line := scanner.Text()
 
-        if len(line) < 3 {
-            continue
-        }
+		if len(line) < 3 {
+			continue
+		}
 
-        a := string(line[0])
-        b := string(line[2])
+		a := string(line[0])
+		b := string(line[2])
 
-        score := 0
+		score := 0
 
-        if a == "A" {
-            if b == "X" {
-                score = score + 3 + 1
-            } else if b == "Y" {
-                score = score + 6 + 2
-            } else if b == "Z" {
-                score = score + 0 + 3
-            }
-        } else if a == "B" {
-            if b == "X" {
-                score = score + 0 + 1
-            } else if b == "Y" {
-                score = score + 3 + 2
-            } else if b == "Z" {
-                score = score + 6 + 3
-            }
-        } else if a == "C" {
-            if b == "X" {
-                score = score + 6 + 1
-            } else if b == "Y" {
-                score = score + 0 + 2
-            } else if b == "Z" {
-                score = score + 3 + 3
-            }
-        }
+		if a == "A" {
+			if b == "X" {
+				score = score + 3 + 1
+			} else if b == "Y" {
+				score = score + 6 + 2
+			} else if b == "Z" {
+				score = score + 0 + 3
+			}
+		} else if a == "B" {
+			if b == "X" {
+				score = score + 0 + 1
+			} else if b == "Y" {
+				score = score + 3 + 2
+			} else if b == "Z" {
+				score = score + 6 + 3
+			}
+		} else if a == "C" {
+			if b == "X" {
+				score = score + 6 + 1
+			} else if b == "Y" {
+				score = score + 0 + 2
+			} else if b == "Z" {
+				score = score + 3 + 3
+			}
+		}
 
-        totalScore = totalScore + score
-    }
+		totalScore = totalScore + score
+	}
 
-    return totalScore, nil
+	return totalScore, nil
 }
 
 func RunPartTwoSample() {
@@ -108,48 +108,48 @@ func runPartTwo(filePath string) (int, error) {
 	scanner := bufio.NewScanner(file)
 	scanner.Split(bufio.ScanLines)
 
-    totalScore := 0
+	totalScore := 0
 
-    for scanner.Scan() {
-        line := scanner.Text()
+	for scanner.Scan() {
+		line := scanner.Text()
 
-        if len(line) < 3 {
-            continue
-        }
+		if len(line) < 3 {
+			continue
+		}
 
-        a := string(line[0])
-        b := string(line[2])
+		a := string(line[0])
+		b := string(line[2])
 
-        score := 0
+		score := 0
 
-        if a == "A" {
-            if b == "X" {
-                score = score + 0 + 3
-            } else if b == "Y" {
-                score = score + 3 + 1
-            } else if b == "Z" {
-                score = score + 6 + 2
-            }
-        } else if a == "B" {
-            if b == "X" {
-                score = score + 0 + 1
-            } else if b == "Y" {
-                score = score + 3 + 2
-            } else if b == "Z" {
-                score = score + 6 + 3
-            }
-        } else if a == "C" {
-            if b == "X" {
-                score = score + 0 + 2
-            } else if b == "Y" {
-                score = score + 3 + 3
-            } else if b == "Z" {
-                score = score + 6 + 1
-            }
-        }
+		if a == "A" {
+			if b == "X" {
+				score = score + 0 + 3
+			} else if b == "Y" {
+				score = score + 3 + 1
+			} else if b == "Z" {
+				score = score + 6 + 2
+			}
+		} else if a == "B" {
+			if b == "X" {
+				score = score + 0 + 1
+			} else if b == "Y" {
+				score = score + 3 + 2
+			} else if b == "Z" {
+				score = score + 6 + 3
+			}
+		} else if a == "C" {
+			if b == "X" {
+				score = score + 0 + 2
+			} else if b == "Y" {
+				score = score + 3 + 3
+			} else if b == "Z" {
+				score = score + 6 + 1
+			}
+		}
 
-        totalScore = totalScore + score
-    }
+		totalScore = totalScore + score
+	}
 
-    return totalScore, nil
+	return totalScore, nil
 }
